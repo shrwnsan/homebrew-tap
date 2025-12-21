@@ -26,7 +26,7 @@ To ensure a fair comparison with identical workloads:
 #### Data Collection
 ```bash
 # Example command used for timing
-time echo "y" | PARALLEL_JOBS=8 ./bin/brew-change [packages] > /dev/null
+time echo "y" | PARALLEL_JOBS=8 ./brew-change [packages] > /dev/null
 ```
 
 - Captured: real time, user CPU time, system CPU time, CPU percentage

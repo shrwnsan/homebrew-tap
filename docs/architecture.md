@@ -4,8 +4,7 @@
 
 ```
 brew-change/
-├── bin/
-│   └── brew-change              # Main entry point
+├── brew-change                  # Main entry point
 └── lib/
     ├── brew-change-config.sh    # Configuration and constants
     ├── brew-change-utils.sh     # Utility functions

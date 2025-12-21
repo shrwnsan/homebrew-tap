@@ -41,8 +41,7 @@ The utility is built with a modular architecture for maintainability and extensi
 
 ```
 brew-change/
-├── bin/
-│   └── brew-change              # Main entry point and CLI interface
+├── brew-change                  # Main entry point and CLI interface
 └── lib/
     ├── brew-change-config.sh    # Configuration constants and environment variables
     ├── brew-change-utils.sh     # Core utility functions (URL validation, caching, etc.)

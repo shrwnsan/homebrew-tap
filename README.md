@@ -1,6 +1,6 @@
 # brew-change
 
-Enhanced Homebrew changelog utility that shows detailed release information for outdated packages with intelligent package type detection and parallel processing.
+Make informed updates - see what changed in your Homebrew packages
 
 ## 🚀 Quick Start
 
@@ -23,6 +23,14 @@ brew-change -a
 # Show help
 brew-change --help
 ```
+
+## 🎯 Who This Is For
+
+- **Developers** who want to understand package changes before updating
+- **DevOps Engineers** managing production dependencies
+- **Security-Conscious Users** checking for vulnerability fixes
+- **Power Users** who like knowing what's changing in their tools
+- **Curious Learners** exploring how their tools evolve
 
 ## ✨ Key Features
 
