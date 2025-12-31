@@ -1,8 +1,8 @@
 class BrewChange < Formula
   desc "Make informed updates - see what changed in your Homebrew packages"
   homepage "https://github.com/shrwnsan/brew-change"
-  url "https://github.com/shrwnsan/brew-change/archive/refs/tags/v1.5.0.tar.gz"
-  sha256 "357f9fec1ed2fcfeb2baa5eca613990873a802328d7d5de854232db86ee5bc31"
+  url "https://github.com/shrwnsan/brew-change/archive/refs/tags/v1.5.1.tar.gz"
+  sha256 "d054c6bde29f538e121bf9f497cad16161fd56cd59ccc75e642d6f4f4fa7d2a2"
   license "Apache-2.0"
   head "https://github.com/shrwnsan/brew-change.git", branch: "main"
 
