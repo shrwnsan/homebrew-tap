@@ -47,7 +47,14 @@ Example: `source-highlight 3.1.8`
 ```
 Example: `foobar: fix flibble matrix`
 
-*Note: This tap uses Conventional Commits for consistency with personal workflow, not official Homebrew format.*
+### Rationale
+
+Conventional Commits over Homebrew-core format because:
+- **Personal tap** — no upstream tooling compatibility needed
+- **Workflow consistency** — matches other personal repos
+- **Semantic clarity** — distinguishes `fix`/`chore`/`feat`
+
+*Note: Use Homebrew-core format (`formula 1.2.3`) if contributing upstream*
 
 ## Formula Updates
 
