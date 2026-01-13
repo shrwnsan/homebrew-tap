@@ -31,6 +31,12 @@ Co-Authored-By: <Model> <attribution>
 - `fix`: Upstream release includes bug fixes
 - `chore`: Routine version bump, feature releases, or unclear changes
 
+**Commit body guidance:**
+- Keep it lightweight — one sentence max
+- Highlight notable changes, but don't duplicate upstream changelog
+- Reference upstream release with `gh release view` or GitHub releases page when unsure
+- Use body when the change isn't obvious from version alone
+
 ### Reference: Official Homebrew-core Format
 
 For comparison, official `Homebrew/homebrew-core` uses a simpler format:
