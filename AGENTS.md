@@ -69,8 +69,23 @@ Conventional Commits over Homebrew-core format because:
 - [ ] Update `url` to new version tarball
 - [ ] Update `sha256` checksum (use `sha256sum` or `shasum -a 256`)
 - [ ] Check for any formula-specific changes needed
+- [ ] Fetch release notes for commit body context
 - [ ] Commit with appropriate message
 - [ ] Push to remote
+
+### Fetching Release Notes
+
+Before committing, fetch upstream release notes to craft a meaningful commit body:
+
+```bash
+# Using GitHub CLI
+gh release view --repo owner/repo vX.Y.Z --json name,body
+
+# For full changelog context, pipe to less
+gh release view --repo owner/repo vX.Y.Z | less
+```
+
+Summarize notable changes in 1-2 lines for the commit body when the version alone doesn't tell the full story.
 
 ### Getting SHA256
 ```bash
