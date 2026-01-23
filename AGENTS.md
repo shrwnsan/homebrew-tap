@@ -64,7 +64,21 @@ Conventional Commits over Homebrew-core format because:
 
 ## Formula Updates
 
-### Checklist
+### Automated Updates (brew-change)
+
+The `brew-change` formula is automatically updated when releases are published upstream. The `scripts/release.sh` in `shrwnsan/brew-change` handles:
+
+- Version bump detection
+- SHA256 computation
+- Formula file updates
+- Conventional commit creation (`fix` vs `chore` detection)
+
+No manual intervention required for `brew-change` updates.
+
+### Manual Updates (Other Formulae)
+
+For formulae without automated upstream integration:
+
 - [ ] Verify new version exists upstream
 - [ ] Update `url` to new version tarball
 - [ ] Update `sha256` checksum (use `sha256sum` or `shasum -a 256`)
