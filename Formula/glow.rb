@@ -7,6 +7,11 @@ class Glow < Formula
 
   depends_on "go" => :build
 
+  bottle do
+    root_url "https://github.com/shrwnsan/glow/releases/download/v2.1.2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0836701511d7add7bc91732b73a4e37f0646502e242488e7ea1937043a66a50e"
+  end
+
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X main.Version=#{version}")
 
