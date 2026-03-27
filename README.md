@@ -4,69 +4,75 @@ Personal Homebrew tap for useful development tools and utilities.
 
 ## 🚀 Installation
 
-### Add the Tap
 ```bash
+# Add the tap
 brew tap shrwnsan/homebrew-tap
-```
 
-### Install Tools
-```bash
-# Install brew-change
-brew install brew-change
-
-# Or install directly without tapping first
-brew install shrwnsan/tap/brew-change
+# Install a tool
+brew install tailroute-cli
 ```
 
 ## 📦 Available Tools
 
-### [brew-change](https://github.com/shrwnsan/brew-change)
-Make informed updates - see what changed in your Homebrew packages before updating.
+### [tailroute-cli](https://github.com/shrwnsan/tailroute-cli)
+
+Automatic MagicDNS toggle for Tailscale + VPN coexistence on macOS.
 
 ```bash
-# Show detailed changelog for specific package
-brew-change node
+# Install
+brew install tailroute-cli
 
-# Show detailed changelogs for all outdated packages in parallel
-brew-change -a
+# Setup
+sudo tailroute install
 
-# Show verbose output with version information
-brew-change -v
+# Check status
+tailroute status
+```
+
+### [brew-change](https://github.com/shrwnsan/brew-change)
+
+See what changed in your Homebrew packages before updating.
+
+```bash
+brew install brew-change
+brew-change node      # Changelog for specific package
+brew-change -a        # All outdated packages
+```
+
+### [brew-usage](https://github.com/shrwnsan/brew-usage)
+
+Analyze Homebrew package usage patterns.
+
+```bash
+brew install brew-usage
+```
+
+### [glow](https://github.com/charmbracelet/glow)
+
+Markdown renderer with subscript/superscript support (fork with patches).
+
+```bash
+brew install glow
 ```
 
 ## 🔧 Usage
 
-### Update Tap
 ```bash
-brew update
-```
-
-### Upgrade Tools
-```bash
-brew upgrade brew-change
-```
-
-### Remove Tap
-```bash
-brew untap shrwnsan/homebrew-tap
+brew update              # Update tap
+brew upgrade <formula>   # Upgrade a tool
+brew untap shrwnsan/homebrew-tap  # Remove tap
 ```
 
 ## 📋 Requirements
 
-- **macOS** or **Linux** with [Homebrew](https://brew.sh/) installed
-- **jq** and **curl** dependencies are automatically installed
+- macOS or Linux with [Homebrew](https://brew.sh/) installed
 
 ## 🤝 Contributing
 
 1. Fork this repository
-2. Create a feature branch
-3. Add your formula to the `Formula/` directory
-4. Submit a pull request
+2. Add your formula to `Formula/`
+3. Submit a pull request
 
 ## 📄 License
 
 This tap follows the licenses of the individual tools it distributes.
-
----
-
-**Looking for more tools?** Check out the individual tool repositories for detailed documentation.
