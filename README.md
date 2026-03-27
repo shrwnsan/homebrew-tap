@@ -47,7 +47,7 @@ Analyze Homebrew package usage patterns.
 brew install brew-usage
 ```
 
-### [glow](https://github.com/charmbracelet/glow)
+### [glow](https://github.com/shrwnsan/glow)
 
 Markdown renderer with subscript/superscript support (fork with patches).
 
