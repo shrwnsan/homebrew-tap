@@ -1,8 +1,8 @@
 class BrewUsage < Formula
   desc "Homebrew Disk Usage Analyzer - Shows disk usage information for installed Homebrew packages"
   homepage "https://github.com/shrwnsan/brew-usage#readme"
-  url "https://github.com/shrwnsan/brew-usage/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "78311d06c2b65c44618e447d69d22840a296da3af8f54f8dbf69da03570e5bff"
+  url "https://github.com/shrwnsan/brew-usage/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "b297b54ff08b4abe9c578dc17e29e29a84e52c80cfc03d5baef2ce95f01f235a"
   license "Apache-2.0"
   head "https://github.com/shrwnsan/brew-usage.git", branch: "main"
 
