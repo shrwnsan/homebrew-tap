@@ -1,8 +1,8 @@
 class TailrouteCli < Formula
   desc "Automatic Tailscale + VPN coexistence for macOS"
   homepage "https://github.com/shrwnsan/tailroute-cli"
-  url "https://github.com/shrwnsan/tailroute-cli/archive/refs/tags/v0.5.0-beta.2.tar.gz"
-  sha256 "324b255a3e92f181168aae5575e63d72b9424a6915378dbb8deda8c97aedfe8f"
+  url "https://github.com/shrwnsan/tailroute-cli/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "d9befeb753fdf6a6107ea5928c52e82cfa64d3eba6470f56f44e98f97925aff4"
   license "Apache-2.0"
   head "https://github.com/shrwnsan/tailroute-cli.git", branch: "main"
 
@@ -12,12 +12,12 @@ class TailrouteCli < Formula
   resource "proxy" do
     on_macos do
       on_arm do
-        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.5.0-beta.2/tailroute-proxy-darwin-arm64"
-        sha256 "3e19f3aaf30906f9eb6f923a70c10d61e09914f7984c90c0a73cccf09173444d"
+        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.6.0/tailroute-proxy-darwin-arm64"
+        sha256 "0579a3f5a3c0769301a7166d43f376471ed725dd1195a5b8086a6fb4f2d4619c"
       end
       on_intel do
-        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.5.0-beta.2/tailroute-proxy-darwin-amd64"
-        sha256 "601e15185505a1165176442a3aecc43af3a05983a2234a745b2fc14f8f0e021b"
+        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.6.0/tailroute-proxy-darwin-amd64"
+        sha256 "660b9ca7c207aa080d468497b6cf77489204ef7ab6ef5275afd1839973f1cd81"
       end
     end
   end
@@ -51,6 +51,10 @@ class TailrouteCli < Formula
 
       The SOCKS5 proxy (tailroute-proxy) is available at 127.0.0.1:1055
       when Tailscale and VPN are both active.
+
+      Browser tunnels (v0.6.0): `tailroute tunnel add <peer>` publishes a
+      peer's Tailscale Serve endpoint at https://<peer>.ts.net:<port> with
+      valid TLS, in any browser, while the VPN stays connected.
     EOS
   end
 
