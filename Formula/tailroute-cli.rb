@@ -63,6 +63,11 @@ class TailrouteCli < Formula
       The SOCKS5 proxy (tailroute-proxy) is available at 127.0.0.1:1055
       when Tailscale and VPN are both active.
 
+      The daemon runs as a root launchd service, so Homebrew takes
+      root:admin ownership of this formula's Cellar paths. Upgrades and
+      uninstall will prompt for sudo and may need those paths removed
+      manually (`sudo brew services stop tailroute-cli` first).
+
       Browser tunnels (v0.7.0): `tailroute tunnel add <peer>` publishes a
       peer's Tailscale Serve endpoint at https://<peer>.ts.net:<port> with
       TLS verified against the peer's hostname, in any browser, while the
