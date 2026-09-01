@@ -4,6 +4,7 @@ class TailrouteCli < Formula
   url "https://github.com/shrwnsan/tailroute-cli/archive/refs/tags/v0.7.2.tar.gz"
   sha256 "e84ac64be3a097bf802d574fbd3143a3f8dfcd8c7e1169924f8d470efa925757"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/shrwnsan/tailroute-cli.git", branch: "main"
 
   depends_on "curl"
@@ -37,6 +38,16 @@ class TailrouteCli < Formula
 
     # Install launchd plist
     (prefix/"etc").install "etc/com.tailroute.daemon.plist"
+  end
+
+  # Daemon runs as root (MagicDNS toggles + /etc/hosts edits need it)
+  service do
+    run [opt_bin/"tailroute", "daemon"]
+    run_type :immediate
+    keep_alive true
+    require_root true
+    log_path var/"log/tailroute-daemon.log"
+    error_log_path var/"log/tailroute-daemon.log"
   end
 
   def caveats
