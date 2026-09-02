@@ -13,11 +13,11 @@ class TailrouteCli < Formula
     on_macos do
       on_arm do
         url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.8.6/tailroute-proxy-darwin-arm64"
-        sha256 "f5679ed6177773c4bd4c533a76315791a6843e19f7d5aafa731b675aa5c7d99e"
+        sha256 "fc3bfd218141e75d9e8d3ef22279c98d34a79ae32e4c7e7a94c338cca3a20b37"
       end
       on_intel do
         url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.8.6/tailroute-proxy-darwin-amd64"
-        sha256 "03a15ac6d267816de2ef43d042f21cad4104543314709d6fd70fca06961ccc67"
+        sha256 "195b0c7fd9ea1c0a6c8eaf517c860162c6174e0471a2b25cfbaa2942c0fd8fbe"
       end
     end
   end
