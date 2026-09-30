@@ -1,8 +1,8 @@
 class TailrouteCli < Formula
   desc "Automatic Tailscale + VPN coexistence for macOS"
   homepage "https://github.com/shrwnsan/tailroute-cli"
-  url "https://github.com/shrwnsan/tailroute-cli/archive/refs/tags/v0.8.16.tar.gz"
-  sha256 "1da58a960136e570ef51a7706e09281d647a823aebc9e577791334e9de094337"
+  url "https://github.com/shrwnsan/tailroute-cli/archive/refs/tags/v0.8.17.tar.gz"
+  sha256 "b914aa6a800e77b9604b677ef3bd7d7c9225f14e625fd72b30078f145cb5c0e2"
   license "Apache-2.0"
   head "https://github.com/shrwnsan/tailroute-cli.git", branch: "main"
 
@@ -12,12 +12,12 @@ class TailrouteCli < Formula
   resource "proxy" do
     on_macos do
       on_arm do
-        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.8.16/tailroute-proxy-darwin-arm64"
-        sha256 "33d561c2a91a272c68e7299c6ffb771c5ac86a7c15d8dea3239a4c241e8e538a"
+        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.8.17/tailroute-proxy-darwin-arm64"
+        sha256 "37aacb6f95602ac529a6c8c3d725a3346c99d42dc501674516a7dd8faca8940e"
       end
       on_intel do
-        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.8.16/tailroute-proxy-darwin-amd64"
-        sha256 "0a6514c687aac4d1c60384bf3f756ea2f48c022fec6ab542cd61ba8adb887f18"
+        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.8.17/tailroute-proxy-darwin-amd64"
+        sha256 "c316a207c6fd9a4c030843f4944eaffa2fa292cecb8085ad2b154cd84f72d297"
       end
     end
   end
@@ -37,6 +37,10 @@ class TailrouteCli < Formula
 
     # Install launchd plist
     (prefix/"etc").install "etc/com.tailroute.daemon.plist"
+
+    # Install log rotation config (the daemon stages it into /etc/newsyslog.d
+    # at startup; without this line in the prefix the staging silently no-ops)
+    (prefix/"etc/newsyslog.d").install "etc/newsyslog.d/tailroute.conf"
   end
 
   # Daemon runs as root (MagicDNS toggles + /etc/hosts edits need it)
