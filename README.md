@@ -16,18 +16,29 @@ brew install tailroute-cli
 
 ### [tailroute-cli](https://github.com/shrwnsan/tailroute-cli)
 
-Automatic MagicDNS toggle for Tailscale + VPN coexistence on macOS.
+**tailroute-cli** — Automatic MagicDNS toggle for Tailscale + VPN coexistence on macOS. Prefer the one-liner:
 
 ```bash
-# Install
-brew install tailroute-cli
+brew install shrwnsan/tap/tailroute-cli
+```
 
+```bash
 # Setup
 sudo tailroute install
 
 # Check status
 tailroute status
 ```
+
+### [tailroute](https://github.com/shrwnsan/tailroute-cli) (cask)
+
+**Tailroute** — the menu-bar companion app to `tailroute-cli` (ships the same daemon, adds a GUI).
+
+```bash
+brew install --cask shrwnsan/tap/tailroute
+```
+
+> Not affiliated with any other project that shares the "tailroute" name.
 
 ### [brew-change](https://github.com/shrwnsan/brew-change)
 
