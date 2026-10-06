@@ -1,6 +1,6 @@
 cask "tailroute" do
-  version "0.8.17"
-  sha256 "2f4b83c1dd65548f1293560ed631d96dc4ae04d6eac18b2df2af0b5c2689a534"
+  version "0.8.18"
+  sha256 "fa1c9cf156e33cf644976d200e734e8c7023710be6241f315ddc071d2ef325e1"
 
   url "https://github.com/shrwnsan/tailroute-cli/releases/download/app-v#{version}/Tailroute-#{version}.dmg"
   name "Tailroute"
