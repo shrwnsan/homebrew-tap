@@ -1,11 +1,12 @@
 class TailrouteCli < Formula
   desc "Automatic Tailscale + VPN coexistence for macOS"
-  homepage "https://github.com/shrwnsan/tailroute-cli"
+  homepage "https://tailroute.app"
   url "https://github.com/shrwnsan/tailroute-cli/archive/refs/tags/v0.8.17.tar.gz"
   sha256 "b914aa6a800e77b9604b677ef3bd7d7c9225f14e625fd72b30078f145cb5c0e2"
   license "Apache-2.0"
   head "https://github.com/shrwnsan/tailroute-cli.git", branch: "main"
 
+  depends_on macos: :sequoia # uniform floor, 2026-10-07 (supersedes the CLI-12+/app-15+ split)
   depends_on "curl"
   depends_on "tailscale"
 
