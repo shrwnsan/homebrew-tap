@@ -16,7 +16,7 @@ cask "tailroute" do
   # macOS 15+ floor (uniform, 2026-10-07). The bundle's LSMinimumSystemVersion
   # still says 12.0 until Package.swift bumps to .v15 at the next app release;
   # direct DMG downloads therefore remain 12+-capable until then.
-  depends_on macos :sequoia
+  depends_on macos: :sequoia
 
   app "Tailroute.app"
 
