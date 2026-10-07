@@ -5,7 +5,7 @@ cask "tailroute" do
   url "https://github.com/shrwnsan/tailroute-cli/releases/download/app-v#{version}/Tailroute-#{version}.dmg"
   name "Tailroute"
   desc "Automatic Tailscale + VPN coexistence tool"
-  homepage "https://github.com/shrwnsan/tailroute-cli"
+  homepage "https://tailroute.app"
 
   livecheck do
     url "https://github.com/shrwnsan/tailroute-cli/releases"
@@ -13,7 +13,10 @@ cask "tailroute" do
     regex(/app-v(\d+(?:\.\d+)+)/i) # app-v tags only: plain v* tags are the CLI, not this cask
   end
 
-  depends_on macos: :monterey # matches the bundle's LSMinimumSystemVersion (12.0)
+  # macOS 15+ floor (uniform, 2026-10-07). The bundle's LSMinimumSystemVersion
+  # still says 12.0 until Package.swift bumps to .v15 at the next app release;
+  # direct DMG downloads therefore remain 12+-capable until then.
+  depends_on macos :sequoia
 
   app "Tailroute.app"
 
