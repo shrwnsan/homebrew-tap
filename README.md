@@ -34,6 +34,8 @@ tailroute status
 
 **Tailroute** — the menu-bar companion app to `tailroute-cli` (ships the same daemon, adds a GUI).
 
+The formula and the cask version **independently** — the CLI package (`v*` tags) and the menu-bar app (`app-v*` tags) are separate products with separate release cadences, so a version difference between them is expected, not staleness.
+
 ```bash
 brew install --cask shrwnsan/tap/tailroute
 ```
