@@ -4,7 +4,7 @@ cask "tailroute" do
 
   url "https://github.com/shrwnsan/tailroute-cli/releases/download/app-v#{version}/Tailroute-#{version}.dmg"
   name "Tailroute"
-  desc "Automatic Tailscale + VPN coexistence tool"
+  desc "Menu bar app for automatic Tailscale + VPN coexistence on macOS"
   homepage "https://tailroute.app"
 
   livecheck do
@@ -19,6 +19,10 @@ cask "tailroute" do
   depends_on macos: :sequoia
 
   app "Tailroute.app"
+
+  caveats <<~EOS
+    The app does not self-update yet; upgrades come via `brew upgrade --cask tailroute`.
+  EOS
 
   uninstall quit: "com.shrwnsan.tailroute"
 
