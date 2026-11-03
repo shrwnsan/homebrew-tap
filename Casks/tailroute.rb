@@ -1,6 +1,6 @@
 cask "tailroute" do
-  version "0.8.19"
-  sha256 "33933c5a04d6eb69770949261f2c74b4da28c7c4a425e1531d68711c435001a9"
+  version "0.8.20"
+  sha256 "dbbf8c9879caeffbc009cc0b147b67995ab96ce24792d2ed4761f9113296cd43"
 
   url "https://github.com/shrwnsan/tailroute-cli/releases/download/app-v#{version}/Tailroute-#{version}.dmg"
   name "Tailroute"
@@ -13,9 +13,9 @@ cask "tailroute" do
     regex(/app-v(\d+(?:\.\d+)+)/i) # app-v tags only: plain v* tags are the CLI, not this cask
   end
 
-  # macOS 15+ floor (uniform, 2026-10-07). The bundle's LSMinimumSystemVersion
-  # still says 12.0 until Package.swift bumps to .v15 at the next app release;
-  # direct DMG downloads therefore remain 12+-capable until then.
+  # macOS 15+ floor (uniform, 2026-10-07). Since app-v0.8.20 the bundle's
+  # LSMinimumSystemVersion (15.0) and the SPM manifest agree with this line,
+  # so direct DMG downloads and the cask declare the same floor.
   depends_on macos: :sequoia
 
   app "Tailroute.app"
