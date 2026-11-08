@@ -1,6 +1,6 @@
 cask "tailroute" do
-  version "0.8.20"
-  sha256 "dbbf8c9879caeffbc009cc0b147b67995ab96ce24792d2ed4761f9113296cd43"
+  version "0.8.21"
+  sha256 "194ca02a11bc4dace62d0aa72f0c6551124e525041d0a3841d3a63ae586556db"
 
   url "https://github.com/shrwnsan/tailroute-cli/releases/download/app-v#{version}/Tailroute-#{version}.dmg"
   name "Tailroute"
@@ -22,6 +22,12 @@ cask "tailroute" do
 
   caveats <<~EOS
     The app does not self-update yet; upgrades come via `brew upgrade --cask tailroute`.
+
+    The app is not notarized yet, so macOS shows a "Not Opened" dialog the
+    first time an installed or upgraded copy launches. Do not choose Move to
+    Trash, which deletes the app. Choose Done, then open System Settings >
+    Privacy & Security and click Open Anyway. If the app is already gone, run
+    `brew reinstall --cask tailroute`.
   EOS
 
   uninstall quit: "com.shrwnsan.tailroute"
