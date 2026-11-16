@@ -1,8 +1,8 @@
 class TailrouteCli < Formula
   desc "Automatic Tailscale + VPN coexistence for macOS"
   homepage "https://tailroute.app"
-  url "https://github.com/shrwnsan/tailroute-cli/archive/refs/tags/v0.9.6.tar.gz"
-  sha256 "b91136b4baf12d000366dc91b344230dba4044b014df8270d07b14d4ca7ec3bd"
+  url "https://github.com/shrwnsan/tailroute-cli/archive/refs/tags/v0.9.7.tar.gz"
+  sha256 "c3d6bc3924592913707a9e6721741f41ee912c800e28ecf37f3cf8f3f24c9d53"
   license "Apache-2.0"
   head "https://github.com/shrwnsan/tailroute-cli.git", branch: "main"
 
@@ -13,12 +13,12 @@ class TailrouteCli < Formula
   resource "proxy" do
     on_macos do
       on_arm do
-        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.9.6/tailroute-proxy-darwin-arm64"
-        sha256 "2d839f876ac8f022dd55b75ed685d29e5ff0abce61b71cf8138ad2b3a45926a5"
+        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.9.7/tailroute-proxy-darwin-arm64"
+        sha256 "a4f83922c45f5cfd5862250cdecffae4b091082238360e69b699fd6d5b5566d9"
       end
       on_intel do
-        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.9.6/tailroute-proxy-darwin-amd64"
-        sha256 "1ac0de1ef04102145d46e87b46f22ea1b111c0330bc83c2baa4f47a55798ed91"
+        url "https://github.com/shrwnsan/tailroute-cli/releases/download/v0.9.7/tailroute-proxy-darwin-amd64"
+        sha256 "c9e1ba31f6b5dfedbcb4331fc852422e04eb536c1865740c69283b96241c159a"
       end
     end
   end
